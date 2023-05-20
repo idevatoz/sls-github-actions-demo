@@ -1,0 +1,34 @@
+name: Test AWS Authorization
+
+run-name: ${{ github.actor }} is testing AWS authorization 🚀
+
+on:
+  issue_comment:
+    types: [created, edited, deleted]
+
+jobs:
+  Job_To-Test-AWS-Authorization:
+    runs-on: ubuntu-latest
+    if: github.event.issue.pull_request && contains(github.event.comment.body, 'test aws auth')
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-region: us-east-1
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        # role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
+        # role-external-id: ${{ secrets.AWS_ROLE_EXTERNAL_ID }}
+        # role-duration-seconds: 1200
+        # role-session-name: AssetsUploadSession
+    - name: Get Current IAM User Information
+      run: |
+        aws iam get-user 
+
+    - name: List IAM Users
+      run: |
+        aws iam list-users
+
+      - run: echo "🍏 This job's status is ${{ job.status }}."
