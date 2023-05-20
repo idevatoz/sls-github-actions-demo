@@ -4,7 +4,12 @@ run-name: ${{ github.actor }} is testing AWS authorization 🚀
 
 on:
   issue_comment:
-    types: [created, edited, deleted]
+    types: [edited]
+
+  pull_request:
+    types: [edited]
+    branches:
+      - '*'
 
 jobs:
   Job_To-Test-AWS-Authorization:

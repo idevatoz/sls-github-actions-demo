@@ -4,7 +4,12 @@ run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 
 on:
   issue_comment:
-    types: [created, edited, deleted]
+    types: [edited]
+
+  pull_request:
+    types: [edited]
+    branches:
+      - '*'
 
 jobs:
   Explore-GitHub-Actions:
