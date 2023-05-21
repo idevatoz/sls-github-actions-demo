@@ -9,7 +9,7 @@ on:
   pull_request:
     types: [edited]
     branches:
-      - '*'
+      - master
 
 jobs:
   Explore-GitHub-Actions:
