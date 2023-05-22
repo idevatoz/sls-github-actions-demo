@@ -9,8 +9,8 @@ on:
   pull_request:
     types: [edited]
     branches:
-      - '*'
-
+      - master
+      
 jobs:
   Job_To-Test-AWS-Authorization:
     runs-on: ubuntu-latest
