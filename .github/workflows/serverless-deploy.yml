@@ -9,8 +9,8 @@ on:
   pull_request:
     types: [edited]
     branches:
-      - '*'
-
+      - master
+      
 jobs:
   Job_To-Deploy-AWS-Lambda:
     runs-on: ubuntu-latest
