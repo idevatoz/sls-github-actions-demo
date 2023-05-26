@@ -9,7 +9,7 @@ on:
 jobs:
   Job_To-Test-AWS-Authorization:
     runs-on: ubuntu-latest
-    if: github.event.issue.pull_request && contains(github.event.comment.body, 'aws_iam_get_user')
+    if: github.event.issue.pull_request && contains(github.event.comment.body, 'test_aws')
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
