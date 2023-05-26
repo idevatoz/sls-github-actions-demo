@@ -5,16 +5,11 @@ run-name: ${{ github.actor }} is testing AWS authorization 🚀
 on:
   issue_comment:
     types: [created, edited]
-
-  pull_request:
-    types: [edited]
-    branches:
-      - master
-      
+     
 jobs:
   Job_To-Test-AWS-Authorization:
     runs-on: ubuntu-latest
-    if: github.event.issue.pull_request && contains(github.event.comment.body, 'test aws auth')
+    if: github.event.issue.pull_request && contains(github.event.comment.body, 'gh aws iam get-user')
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
