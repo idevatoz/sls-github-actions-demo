@@ -9,7 +9,7 @@ on:
 jobs:
   Job_To-Deploy-AWS-Lambda:
     runs-on: ubuntu-latest
-    if: github.event.issue.pull_request && contains(github.event.comment.body, 'run demo steps')
+    if: github.event.issue.pull_request && contains(github.event.comment.body, 'gh sls deploy')
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
