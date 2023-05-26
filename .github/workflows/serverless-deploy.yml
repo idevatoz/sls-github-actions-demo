@@ -5,11 +5,6 @@ run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
   issue_comment:
     types: [created, edited]
-
-  pull_request:
-    types: [edited]
-    branches:
-      - master
       
 jobs:
   Job_To-Deploy-AWS-Lambda:
