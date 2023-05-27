@@ -1,6 +1,6 @@
 name: Deploy AWS Lambda
 
-run-name: ${{ github.actor }} is Launching Deploy AWS Lambda Workflow. 🚀
+run-name: ${{ github.actor }} Is Launching Deploy AWS Lambda Workflow. 🚀
 
 on:
   issue_comment:
