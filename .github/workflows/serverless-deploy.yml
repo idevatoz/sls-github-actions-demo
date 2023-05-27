@@ -1,6 +1,6 @@
 name: Deploying AWS Lambda
 
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+run-name: ${{ github.actor }} is launching Deploying AWS Lambda. 🚀
 
 on:
   issue_comment:
