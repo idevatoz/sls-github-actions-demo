@@ -2,14 +2,14 @@ name: Test AWS Authorization
 
 run-name: ${{ github.actor }} Is  Launching Test AWS Authorization Workflow. 🚀
 
-on:
-  issue_comment:
-    types: [created]
+# on:
+#  issue_comment:
+#    types: [created]
      
 jobs:
   Job_To-Test-AWS-Authorization:
     runs-on: ubuntu-latest
-    # if: github.event.issue.pull_request && contains(github.event.comment.body, 'testaws')
+    if: github.event.issue.pull_request && contains(github.event.comment.body, 'testaws')
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
