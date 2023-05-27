@@ -1,6 +1,6 @@
 name: Test AWS Authorization
 
-run-name: ${{ github.actor }} is testing AWS authorization 🚀
+run-name: ${{ github.actor }} is Testing AWS authorization. 🚀
 
 on:
   issue_comment:
