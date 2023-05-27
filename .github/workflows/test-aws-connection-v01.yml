@@ -3,6 +3,8 @@ name: Test AWS Authorization
 run-name: ${{ github.actor }} Is  Launching Test AWS Authorization Workflow. 🚀
 
 on:
+  workflow_dispatch:
+  
   issue_comment:
     types: [created]
     
