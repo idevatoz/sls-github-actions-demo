@@ -11,7 +11,7 @@ jobs:
   Job_To-Test-AWS-Authorization:
     if: |
       github.event.issue.pull_request != '' && 
-      contains(github.event.comment.body, 'testaws')
+      startsWith(contains(github.event.comment.body, '/testaws'))
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository
