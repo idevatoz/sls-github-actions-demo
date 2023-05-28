@@ -1,6 +1,6 @@
 name: GitHub Actions Scheduled Workflow.
 
-run-name: ${{ github.actor }} Is Launching GitHub Actions Demo Workflow. 🚀
+run-name: ${{ github.actor }} Is Launching Scheduled Workflow. 🚀
 
 on:
   schedule:
