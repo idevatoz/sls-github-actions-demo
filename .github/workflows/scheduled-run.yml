@@ -9,6 +9,5 @@ on:
 jobs:
   Job_To-Run_Scheduled_Jobs:
     runs-on: ubuntu-latest
-    if: github.event.issue.pull_request && contains(github.event.comment.body, 'gh_demo')
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
