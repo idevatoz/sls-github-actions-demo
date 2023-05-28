@@ -1,0 +1,12 @@
+name: Manual Workflow.
+
+run-name: ${{ github.actor }} Is Launching Manual Workflow. 🚀
+
+on:
+  workflow_dispatch:
+
+jobs:
+  Job_Ran_Manually:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
