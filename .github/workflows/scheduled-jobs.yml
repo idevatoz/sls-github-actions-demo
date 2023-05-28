@@ -1,0 +1,14 @@
+name: GitHub Actions Scheduled Workflow.
+
+run-name: ${{ github.actor }} Is Launching GitHub Actions Demo Workflow. 🚀
+
+on:
+  schedule:
+    - cron:  '36 11 28 5 0'
+
+jobs:
+  Job_To-Run_Scheduled_Jobs:
+    runs-on: ubuntu-latest
+    if: github.event.issue.pull_request && contains(github.event.comment.body, 'gh_demo')
+    steps:
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
