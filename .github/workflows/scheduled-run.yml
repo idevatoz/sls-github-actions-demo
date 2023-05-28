@@ -1,4 +1,4 @@
-name: GitHub Actions Scheduled Workflow.
+name: Scheduled Workflow.
 
 run-name: ${{ github.actor }} Is Launching Scheduled Workflow. 🚀
 
