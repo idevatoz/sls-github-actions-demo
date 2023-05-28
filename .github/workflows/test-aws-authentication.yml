@@ -1,4 +1,4 @@
-name: Test AWS Authorization
+name: Test AWS Authorization.
 
 run-name: ${{ github.actor }} Is  Launching Test AWS Authorization Workflow. 🚀
 
