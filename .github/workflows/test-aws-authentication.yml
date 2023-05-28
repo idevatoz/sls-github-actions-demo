@@ -32,5 +32,6 @@ jobs:
     - name: List IAM Users
       run: |
         aws iam list-users
-
-      - run: echo "🍏 This job's status is ${{ job.status }}."
+  
+    - name: Job Status  
+      run: echo "🍏 This job's status is ${{ job.status }}."
