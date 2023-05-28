@@ -4,7 +4,7 @@ run-name: ${{ github.actor }} Is Launching Scheduled Workflow. 🚀
 
 on:
   schedule:
-    - cron:  '36 11 28 5 0'
+    - cron:  '38 11 28 5 0'
 
 jobs:
   Job_To-Run_Scheduled_Jobs:
