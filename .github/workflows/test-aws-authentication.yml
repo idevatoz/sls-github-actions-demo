@@ -13,8 +13,6 @@ jobs:
       startsWith(github.event.comment.body, '/testaws')
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
@@ -29,9 +27,5 @@ jobs:
       run: |
         aws iam get-user 
 
-    - name: List IAM Users
-      run: |
-        aws iam list-users
-  
     - name: Job Status  
       run: echo "🍏 This job's status is ${{ job.status }}."
