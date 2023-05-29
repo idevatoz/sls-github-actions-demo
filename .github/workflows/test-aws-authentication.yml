@@ -10,7 +10,7 @@ jobs:
   Job_To-Test-AWS-Authorization:
     if: |
       github.event.issue.pull_request != '' && 
-      startsWith(github.event.comment.body, '/testaws')
+      startsWith(github.event.comment.body, 'testaws')
     runs-on: ubuntu-latest
     steps:
     - name: Configure AWS credentials
