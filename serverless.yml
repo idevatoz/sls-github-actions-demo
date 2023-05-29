@@ -2,3 +2,14 @@
 service: sandbox-slackbolt
 
 frameworkVersion: ">=3"
+
+functions:
+  echo:
+    handler: handler.echo
+    environment:
+      SLACK_BOT_TOKEN: ${env:SLACK_BOT_TOKEN}
+      SLACK_SIGNING_SECRET: ${env:SLACK_SIGNING_SECRET}
+
+exclude:
+    - ./Backups
+
